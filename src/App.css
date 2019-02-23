@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  font-family: monospace;
+}
+
+.App-badgeBar {
+  display: flex;
+  justify-content: center;
+}
+
+.App-badgeBar > * {
+  margin-right: 1em;
+}
+
+.App-badgeBar > *:last-child {
+  margin-right: 0;
+}
