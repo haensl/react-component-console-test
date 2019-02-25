@@ -11,12 +11,14 @@ class App extends Component {
     super();
     this.onFinishWritingLines = this.onFinishWritingLines.bind(this);
     this.onFinishWritingLine = this.onFinishWritingLine.bind(this);
+    this.onAppendCheckboxChange = this.onAppendCheckboxChange.bind(this);
     this.resetConsole = this.resetConsole.bind(this);
     this.updateLines = this.updateLines.bind(this);
     this.onTextAreaChange = this.onTextAreaChange.bind(this);
     this.state= {
       textarea: initialLines.join('\n'),
-      lines: initialLines
+      lines: initialLines,
+      append: false
     };
   }
 
@@ -26,6 +28,13 @@ class App extends Component {
 
   onFinishWritingLines() {
     console.info('finished writing lines.')
+  }
+
+  onAppendCheckboxChange(event) {
+    const value = event.target.checked;
+    this.setState({
+      append: value
+    });
   }
 
   resetConsole() {
@@ -63,6 +72,9 @@ class App extends Component {
           </h1>
         </header>
         <div className="App-badgeBar">
+          <img src="https://badge.fury.io/js/react-component-console.svg"
+            height="20"
+            width="120" />
           <img src="https://www.travis-ci.org/haensl/rollup-plugin-local-resolve.svg?branch=master"
             height="20"
             width="90" />
@@ -77,6 +89,9 @@ class App extends Component {
           onFinishWritingLines={
             this.onFinishWritingLines
           }
+          console={{
+            append: this.state.append
+          }}
         />
         <textarea rows="5"
           cols="33"
@@ -85,6 +100,12 @@ class App extends Component {
           onBlur={ this.updateLines }
         />
         <div className="App-controls">
+          <label>Append lines
+            <input type="checkbox"
+              onChange={ this.onAppendCheckboxChange }
+              checked={ this.state.append }
+            />
+          </label>
           <button onClick={ this.resetConsole }>Reset</button>
         </div>
       </div>

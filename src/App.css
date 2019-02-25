@@ -9,6 +9,7 @@
 .App-badgeBar {
   display: flex;
   justify-content: center;
+  margin-bottom: 2em;
 }
 
 .App-badgeBar > * {
@@ -16,5 +17,22 @@
 }
 
 .App-badgeBar > *:last-child {
+  margin-right: 0;
+}
+
+.App > textarea {
+  margin-top: 2em;
+}
+
+.App-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.App-controls > * {
+  margin-right: 1em;
+}
+
+.App-controls > *:last-child {
   margin-right: 0;
 }
