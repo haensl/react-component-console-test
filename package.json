@@ -1,6 +1,7 @@
 {
   "name": "react-component-console-test",
-  "version": "0.1.0",
+  "version": "1.0.1",
+  "description": "Testing environment for react-component-console",
   "private": true,
   "dependencies": {
     "react": "^16.8.3",
@@ -22,5 +23,29 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haensl/react-component-console-test.git"
+  },
+  "keywords": [
+    "console",
+    "emulator",
+    "react",
+    "react-component",
+    "terminal",
+    "test",
+    "test environment"
+  ],
+  "author": {
+    "name": "HP Dietz",
+    "url": "https://hpdietz.com",
+    "email": "h.p.dietz@gmail.com",
+    "twitter": "@h_p_d"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haensl/react-component-console-test/issues"
+  },
+  "homepage": "https://github.com/haensl/react-component-console-test#readme"
 }
